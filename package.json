@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/build.js",
     "start": "next start",
     "lint": "next lint",
     "db:setup": "node scripts/setup-db.js",
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.10.0",
+    "dotenv": "^16.4.5",
     "next": "14.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

@@ -6,7 +6,7 @@ async function likeJoke(id: string) {
   'use server';
 
   await prisma.joke.update({
-    where: { id },
+    where: { id: parseInt(id, 10) },
     data: {
       likes: {
         increment: 1,
@@ -16,8 +16,14 @@ async function likeJoke(id: string) {
 }
 
 export default async function JokeDetail({ params }: { params: { id: string } }) {
+  const jokeId = parseInt(params.id, 10);
+
+  if (isNaN(jokeId)) {
+    notFound();
+  }
+
   const joke = await prisma.joke.findUnique({
-    where: { id: params.id },
+    where: { id: jokeId },
   });
 
   if (!joke) {
@@ -39,7 +45,7 @@ export default async function JokeDetail({ params }: { params: { id: string } })
               </div>
               <div className="flex items-center space-x-4">
                 <span>{joke.likes} likes</span>
-                <form action={likeJoke.bind(null, joke.id)}>
+                <form action={likeJoke.bind(null, params.id)}>
                   <button
                     type="submit"
                     className="text-blue-600 hover:text-blue-800 transition-colors"

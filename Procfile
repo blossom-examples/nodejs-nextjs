@@ -1,2 +1,2 @@
-web: npm start
-release: npm run db:setup
+web: yarn start
+release: yarn db:setup

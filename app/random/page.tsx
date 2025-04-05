@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
+import RefreshButton from './RefreshButton';
+
+// Add a dynamic segment to force revalidation
+export const dynamic = 'force-dynamic';
 
 export default async function RandomJoke() {
   // Get a random joke
@@ -17,12 +21,7 @@ export default async function RandomJoke() {
               <p className="text-sm text-gray-500">By {randomJoke.author}</p>
               <p className="text-xs text-gray-400 mt-1">Category: {randomJoke.category}</p>
               <div className="mt-4 flex justify-center space-x-4">
-                <Link
-                  href="/random"
-                  className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors"
-                >
-                  Get Another Joke
-                </Link>
+                <RefreshButton />
                 <Link
                   href="/jokes"
                   className="bg-gray-500 hover:bg-gray-600 text-white font-medium py-2 px-4 rounded transition-colors"
