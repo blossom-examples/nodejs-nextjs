@@ -12,7 +12,7 @@ A simple jokes application built with Next.js, featuring a modern UI with Tailwi
 2. Set up environment variables:
    Create a `.env` file in the root directory with the following variables:
    ```
-   DATABASE_URL="postgres://user:password@localhost:5432/jokes_dev"
+   DATABASE_URL="postgres://user:password@localhost:5432/example_nextjs_dev"
    ```
    For local development, you can use SQLite by not setting the `DATABASE_URL` variable.
 

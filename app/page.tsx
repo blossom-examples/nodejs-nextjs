@@ -39,54 +39,6 @@ export default async function Home() {
         </a>
       </header>
 
-      <div className="grid md:grid-cols-2 gap-8 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Quick Start</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>Modern UI with Tailwind CSS</li>
-            <li>PostgreSQL database with Prisma ORM</li>
-            <li>Server-side rendering with Next.js</li>
-            <li>Ready to deploy on Blossom</li>
-          </ul>
-        </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Next Steps</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-700">
-            <li>
-              <a
-                href="https://nextjs.org/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                Next.js Documentation
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://tailwindcss.com/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                Tailwind CSS Documentation
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.prisma.io/docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-800"
-              >
-                Prisma Documentation
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
       <div className="bg-white p-6 rounded-lg shadow-md mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-center">Random Joke</h2>
         {randomJoke ? (
