@@ -1,5 +1,7 @@
 # Next.js Jokes App
 
+[![Blossom Badge](https://img.boltops.com/images/blossom/logos/blossom-readme.png)](https://blossom-cloud.com)
+
 A simple jokes application built with Next.js, featuring a modern UI with Tailwind CSS and a PostgreSQL database with Prisma ORM. This application is ready to deploy on [Blossom](https://blossom-cloud.com).
 
 ## Getting Started
